@@ -32,6 +32,18 @@ export default class HTML extends React.Component {
           />
           <meta name="description" content="A real-time GraphQL backend platform. Build apps faster with our hosted data and intergrations platform. GraphQL Subscriptions make all of your apps realtime out of the box. Define your data model and instantly get a powerful GraphQL API backed by our highly available infrastructure built on AWS. Build web, mobile, and IOT apps with AngularJS, React, Relay, Apollo Client, Push Notifications, Stripe Payments, Twitter, Facebook, and more. Get started today." />
           <meta name="keywords" content="create your own app, graphql service, graphql, ReactJS, make apps faster, best backend, best baas, graphql subscriptions, realtime, mobile app development, app development, firebase, firebase alternative, reactjs, angularjs, apollo client, relayjs" />
+          {/* Essential META Tags */}
+          <meta property="og:title" content="Scaphold | Community" />
+          <meta property="og:description" content="Find all the resources you need to launch a production app with GraphQL." />
+          <meta property="og:image" content="https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png" />
+          <meta property="og:url" content="https://scaphold.io/community/" />
+          <meta name="twitter:card" content="summary_large_image" />
+          {/* Non-Essential, But Recommended */}
+          <meta property="og:site_name" content="Scaphold | Community" />
+          <meta name="twitter:image:alt" content="Scaphold.io Community Page" />
+          {/* Non-Essential, But Required for Analytics */}
+          <meta property="fb:app_id" content="1636648986655395" />
+          <meta name="twitter:site" content="@ScapholdDotIO" />
           <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
