@@ -9,6 +9,7 @@ import FontAwesome from 'react-fontawesome';
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 import { config } from 'config'; // eslint-disable-line
 import Fuse from 'fuse.js';
+import TimeAgo from 'react-timeago';
 import questions from './questions';
 import pageColorMap from '../../utils/pageColorMap';
 import SearchBar from '../SearchBar';
@@ -132,7 +133,7 @@ export default class QuestionsIndex extends React.Component {
                       </div>
                     </Col>
                     <Col lg={2} md={2} sm={2} xs={12} className="question-timestamp">
-                      <em>Created {new Date(question.createdAt).toLocaleDateString()}</em>
+                      <em>Created <TimeAgo date={new Date(question.createdAt).toLocaleDateString()} /></em>
                     </Col>
                   </Row>
                 ))
