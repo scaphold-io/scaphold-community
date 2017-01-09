@@ -19,7 +19,7 @@ export default class ProjectsIndex extends React.Component {
   static metadata() {
     return {
       title: 'Projects',
-      description: 'Find amazing starter kits for GraphQL.',
+      description: 'Find amazing GraphQL projects built by the community.',
     };
   }
 

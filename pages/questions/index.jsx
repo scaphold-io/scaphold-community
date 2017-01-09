@@ -9,6 +9,7 @@ import FontAwesome from 'react-fontawesome';
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 import { config } from 'config'; // eslint-disable-line
 import Fuse from 'fuse.js';
+import sortBy from 'lodash/sortBy';
 import TimeAgo from 'react-timeago';
 import questions from './questions';
 import pageColorMap from '../../utils/pageColorMap';
@@ -54,7 +55,7 @@ export default class QuestionsIndex extends React.Component {
       minMatchCharLength: 1,
       keys: [
         'title',
-        'author',
+        'askedBy',
         'description',
         'tags',
       ],
@@ -65,6 +66,7 @@ export default class QuestionsIndex extends React.Component {
       const fuse = new Fuse(questions, options);
       filteredQuestionsList = fuse.search(this.state.filter);
     }
+    filteredQuestionsList = sortBy(filteredQuestionsList, q => q.createdAt).reverse();
 
     // Determine bg color of banner
     const path = this.props.route.page.path;
@@ -114,7 +116,7 @@ export default class QuestionsIndex extends React.Component {
                       <h3><Link to={prefixLink(question.url)}>{question.title}</Link></h3>
                       <div className="question-meta">
                         <span className="question-author">
-                          By {question.author}
+                          By {question.askedBy}
                         </span>
                         <ul className="question-tags">
                           {

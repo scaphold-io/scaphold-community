@@ -7,6 +7,7 @@ h5,
 h6 {
   font-family: Lato, sans-serif !important;
   font-weight: 300 !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 * {
@@ -239,9 +240,19 @@ a:focus {
   .searchbar-form-wrapper {
     text-align: center;
   }
+}
 
-  .searchbar-form {
-    padding-left: 35%;
-    padding-right: 35%;
+@media(max-width: 767px) {
+  .wrapper .community-header,
+  .wrapper .community-header-copy,
+  .wrapper .community-header-search .searchbar-form-wrapper {
+    padding: 0 50px;
+  }
+
+  .wrapper {
+    margin-left: -100px;
+    margin-right: -100px;
+    margin-top: -30px;
+    background-color: #1daaa0;
   }
 }

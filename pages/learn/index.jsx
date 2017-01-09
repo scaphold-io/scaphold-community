@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/lib/Button';
 import FontAwesome from 'react-fontawesome';
 import { config } from 'config'; // eslint-disable-line
 import Fuse from 'fuse.js';
+import sortBy from 'lodash/sortBy';
 import guides from './guides';
 import SearchBar from '../SearchBar';
 import pageColorMap from '../../utils/pageColorMap';
@@ -63,6 +64,7 @@ export default class LearnIndex extends React.Component {
       const fuse = new Fuse(guides, options);
       filteredGuidesList = fuse.search(this.state.filter);
     }
+    filteredGuidesList = sortBy(filteredGuidesList, g => g.createdAt).reverse();
 
     // Determine bg color of banner
     const path = this.props.route.page.path;
@@ -78,9 +80,7 @@ export default class LearnIndex extends React.Component {
                 <h1>{LearnIndex.metadata().title}</h1>
               </div>
               <div className="community-header-copy">
-                <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={6} smOffset={3} xs={2} xsOffset={5} className="community-copy-wrapper">
-                  <p>{LearnIndex.metadata().description}</p>
-                </Col>
+                <p>{LearnIndex.metadata().description}</p>
               </div>
               <Row className="community-header-search">
                 <SearchBar onChangeFilter={this.onChangeFilter} value={this.state.filter} />

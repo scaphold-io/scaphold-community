@@ -41,18 +41,18 @@
 }
 
 .feature-1 {
+  -webkit-animation-delay: 0.25s; /* Safari 4.0 - 8.0 */
+  animation-delay: 0.25s;
+}
+
+.feature-2 {
   -webkit-animation-delay: 0.5s; /* Safari 4.0 - 8.0 */
   animation-delay: 0.5s;
 }
 
-.feature-2 {
-  -webkit-animation-delay: 1.0s; /* Safari 4.0 - 8.0 */
-  animation-delay: 1.0s;
-}
-
 .feature-3 {
-  -webkit-animation-delay: 1.5s; /* Safari 4.0 - 8.0 */
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 0.75s; /* Safari 4.0 - 8.0 */
+  animation-delay: 0.75s;
 }
 
 .community-feature {

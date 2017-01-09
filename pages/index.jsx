@@ -8,14 +8,15 @@ import Image from 'react-bootstrap/lib/Image';
 import FontAwesome from 'react-fontawesome';
 import { config } from 'config'; // eslint-disable-line
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
-import guides from './learn/guides';
-import projects from './projects/projects';
+
+import ReactVue2Apollo from './images/projects/react-vue2-apollo.png';
+import GraphQLLogo from './images/graphql.png';
 
 export default class CommunityIndex extends React.Component {
   static metadata() {
     return {
       title: 'Community',
-      description: 'Find all the resources you need to go to production with Scaphold and GraphQL.',
+      description: 'Find all the resources you need to launch a production app with GraphQL.',
     };
   }
 
@@ -27,9 +28,23 @@ export default class CommunityIndex extends React.Component {
   render() {
     // const featuredProjects = [projects[5], projects[3], projects[4]];
     // Featured Project
-    const project = projects[5];
+    const project = {
+      title: 'React + Vue2 + Apollo',
+      author: 'kristianmandrup',
+      url: 'https://github.com/kristianmandrup/react-vue2-apollo-starter-kit',
+      description: 'Apollo starter kit for React and Vue2 with GraphQL for scaphold.io',
+      img: ReactVue2Apollo,
+    };
     // Featured Guide
-    const guide = guides[1];
+    const guide = {
+      title: 'Learn GraphQL',
+      author: 'Kadira',
+      url: 'https://learngraphql.com/',
+      description: 'Learn GraphQL with an hour-long guide that will walk you through how GraphQL fits into your architecture, creating a schema, and executing queries.',
+      createdAt: '2015-06-01 00:00:00',
+      tags: ['GraphQL', 'Tutorial'],
+      img: GraphQLLogo,
+    };
     // Featured Blog
     const blogUrl = '/blog/2016-12-28-scaphold-2016-year-in-review/';
     const blog = this.props.route.pages.find(r => r.path === '/blog/2016-12-28-scaphold-2016-year-in-review/');

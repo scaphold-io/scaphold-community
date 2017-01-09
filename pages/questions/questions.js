@@ -4,8 +4,9 @@ export default [
   {
     title: 'How to implement authentication using GraphQL?',
     description: 'Authentication with GraphQL',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Jordan Gonen',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Authentication', 'OAuth'],
     url: '/questions/authentication-with-graphql/',
     answer: (
@@ -31,8 +32,9 @@ export default [
   {
     title: 'What companies are using GraphQL in production?',
     description: 'Companies that use GraphQL at scale.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Gina Lynch',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Production'],
     url: '/questions/companies-using-graphql-in-production/',
     answer: (
@@ -79,8 +81,9 @@ export default [
   {
     title: 'What\'s the easiest way to integrate a third-party service with GraphQL?',
     description: 'Integrate 3rd-party services (i.e. Stripe, Auth0) with GraphQL',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Gina Lynch',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', '3rd-Party Service', 'Integration'],
     url: '/questions/easiest-way-to-integrate-a-third-party-service-with-graphql/',
     answer: (
@@ -107,8 +110,9 @@ export default [
   {
     title: 'GraphQL Analytics',
     description: 'Solutions for analyzing your GraphQL API.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Jordan Gonen',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Analytics', 'Production'],
     url: '/questions/graphql-analytics/',
     answer: (
@@ -140,8 +144,9 @@ export default [
   {
     title: 'Can I use social logins with GraphQL?',
     description: 'GraphQL and Auth0 Authentication.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Auth0', 'Social', 'Lock'],
     url: '/questions/graphql-auth0-social-authentication/',
     answer: (
@@ -189,8 +194,9 @@ export default [
   {
     title: 'How to implement mobile push notifications with GraphQL?',
     description: 'GraphQL & mobile push notifications.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Sean Cheng',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Android', 'iOS', 'Push'],
     url: '/questions/graphql-mobile-push-notifications/',
     answer: `
@@ -208,8 +214,9 @@ export default [
   // {
   //   title: 'GraphQL vs. REST',
   //   description: '',
-  //   author: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00 -0700',
+  //   askedBy: 'Vince Ning',
+  //   answeredBy: 'Vince Ning',
+  //   createdAt: '2017-01-06 00:00:00',
   //   tags: ['GraphQL', 'REST'],
   //   url: '/questions/graphql-vs-rest/',
   //   answer: `
@@ -226,28 +233,24 @@ export default [
   // },
   // {
   //   title: 'How to create an app on Scaphold?',
-  //   description: '',
-  //   author: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00 -0700',
-  //   tags: ['GraphQL', 'App'],
+  //   description: 'Steps to create a Scaphold app.',
+  //   askedBy: 'Sean Cheng',
+  //   answeredBy: 'Vince Ning',
+  //   createdAt: '2017-01-07 00:00:00',
+  //   tags: ['GraphQL', 'Create', 'App'],
   //   url: '/questions/how-to-create-an-app-on-scaphold/',
-  //   answer: `
-  //     Android and iOS mobile push notifications can be a crucial part of your mobile applications. However, it's
-  //     definitely not the easiest process to set up, let alone setting it up with GraphQL.
-  //     Normally, you'd have to save your authentication key file to be able to interact with
-  //     GCM or APNS for push notifications as well as manage your device tokens. With Scaphold, you can
-  //     upload your key in the integrations portal, and you'll immediately be able to push to other
-  //     users in your app. Scaphold stores the key on AWS and you can start pushing device tokens
-  //     that associate with your currently authenticated user. From then on, you can send Android or iOS push
-  //     notifications directly to users given their IDs with the exposed GraphQL mutations and that user will
-  //     receive the push notification on his or her device.
-  //   `,
+  //   answer: (
+  //     <div>
+  //       There are a couple
+  //     </div>
+  //   ),
   // },
   {
     title: 'How to handle payments with GraphQL?',
     description: 'Using the Stripe integration.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Integration', 'Stripe'],
     url: '/questions/how-to-handle-payments-with-graphql/',
     answer: (
@@ -273,8 +276,9 @@ export default [
   {
     title: 'How to implement custom business logic?',
     description: 'Using AWS Lambda with Scaphold.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'AWS Lambda', 'Custom'],
     url: '/questions/how-to-implement-custom-business-logic/',
     answer: (
@@ -308,8 +312,9 @@ export default [
   {
     title: 'How to send emails with GraphQL?',
     description: 'Using the Mailgun integration.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Integration', 'Mailgun'],
     url: '/questions/how-to-send-emails-with-graphql/',
     answer: (
@@ -326,8 +331,9 @@ export default [
   {
     title: 'Best way to migrate data to Scaphold',
     description: 'Moving to Scaphold from another service.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Migration', 'BaaS'],
     url: '/questions/migrating-data-to-scaphold/',
     answer: (
@@ -357,8 +363,9 @@ export default [
   // {
   //   title: 'Scaphold vs. Other GraphQL Backend as a Service Sites',
   //   description: 'Comparison in GraphQL backend services',
-  //   author: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00 -0700',
+  //   askedBy: 'Vince Ning',
+  //   answeredBy: 'Vince Ning',
+  //   createdAt: '2017-01-06 00:00:00',
   //   tags: ['GraphQL', 'Reindex', 'Graph.cool'],
   //   url: '/questions/scaphold-vs-other-graphql-baas/',
   //   answer: (
@@ -375,8 +382,9 @@ export default [
   // {
   //   title: 'Scaphold vs. Parse and Firebase',
   //   description: 'Comparison in between GraphQL backend vs. REST backend',
-  //   author: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00 -0700',
+  //   askedBy: 'Vince Ning',
+  //   answeredBy: 'Vince Ning',
+  //   createdAt: '2017-01-06 00:00:00',
   //   tags: ['GraphQL', 'Parse', 'Firebase'],
   //   url: '/questions/scaphold-vs-parse-and-firebase/',
   //   answer: (
@@ -393,8 +401,9 @@ export default [
   {
     title: 'What is GraphQL?',
     description: 'Conceptual idea behind GraphQL.',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Facebook'],
     url: '/questions/what-is-graphql/',
     answer: `
@@ -413,8 +422,9 @@ export default [
   // {
   //   title: 'What is real-time GraphQL Subscriptions?',
   //   description: 'Conceptual idea behind GraphQL.',
-  //   author: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00 -0700',
+  //   askedBy: 'Vince Ning',
+  //   answeredBy: 'Vince Ning',
+  //   createdAt: '2017-01-06 00:00:00',
   //   tags: ['GraphQL', 'Real-time', 'Subscriptions'],
   //   url: '/questions/what-is-real-time-graphql-subscriptions/',
   //   answer: `
@@ -433,8 +443,9 @@ export default [
   // {
   //   title: 'What is Scaphold?',
   //   description: 'Conceptual idea behind GraphQL.',
-  //   author: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00 -0700',
+  //   askedBy: 'Vince Ning',
+  //   answeredBy: 'Vince Ning',
+  //   createdAt: '2017-01-06 00:00:00',
   //   tags: ['GraphQL', 'Scaphold'],
   //   url: '/questions/what-is-scaphold/',
   //   answer: `
@@ -453,8 +464,9 @@ export default [
   {
     title: 'When is GraphQL Summit?',
     description: 'Looking to attend a GraphQL event?',
-    author: 'Vince Ning',
-    createdAt: '2017-01-06 00:00:00 -0700',
+    askedBy: 'Vince Ning',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'Events'],
     url: '/questions/when-is-graphql-summit/',
     answer: (

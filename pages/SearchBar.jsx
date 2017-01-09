@@ -15,7 +15,7 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={6} smOffset={3} xs={2} xsOffset={5} className="searchbar-form-wrapper">
+      <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={6} smOffset={3} xs={10} xsOffset={1} className="searchbar-form-wrapper">
         <Form className="searchbar-form animated fadeIn">
           <FormGroup bsSize="lg">
             <InputGroup bsSize="lg">

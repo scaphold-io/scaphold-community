@@ -48,7 +48,7 @@ export default class Question extends React.Component {
               </Col>
             </Row>
           <p className="question-author-footer">
-            Answered by {question.author} on {new Date(question.createdAt).toLocaleDateString()}
+            Answered by {question.answeredBy} on {new Date(question.createdAt).toLocaleDateString()}
           </p>
         </div>
       </DocumentTitle>
