@@ -1,0 +1,41 @@
+.projects-list {
+  margin-top: 33px;
+}
+
+.project-item {
+  text-align: center;
+}
+
+.project-item:hover {
+  background-color: #F5F5F5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project-img-wrapper {
+  margin-top: 15px;
+}
+
+.project-img {
+  margin-bottom: 0;
+}
+
+.project-title {
+  margin: 20px 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3A3A3A;
+}
+
+.project-meta {
+  font-size: 13px;
+}
+
+.project-author {
+  color: #CACACA;
+}
+
+.project-author > span {
+  color: #666;
+  font-size: 13px;
+}

@@ -1,0 +1,127 @@
+.questions-header-action {
+  font-size: 20px;
+  color: #1DAAA0;
+  margin: 12px 0;
+}
+
+.questions-header-action > .btn {
+  background: white; /* 0 0 */
+  color: #1DAAA0;
+  min-width: 0;
+  border: 1px solid #1DAAA0;
+}
+
+.questions-list {
+  margin: 0;
+}
+
+.question-list-item {
+  padding: 20px 0 18px;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #F5F5F5;
+  box-sizing: border-box;
+}
+
+.question-icon-wrapper {
+  text-align: center;
+}
+
+.question-icon {
+  font-size: 30px;
+  margin-right: 10px;
+  position: relative;
+  color: #BBB;
+}
+
+.question-title {
+  display: inline-block;
+}
+
+.question-title > h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: -2px 0 0;
+}
+
+.question-title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.question-author {
+  margin-right: 7px;
+  color: #666;
+  font-size: 13px;
+}
+
+.question-tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.question-tag-wrapper {
+  border-bottom: 0;
+  display: inline;
+  padding: 0;
+  cursor: pointer;
+}
+
+.question-tag {
+  border-radius: 3px;
+  color: #999 !important;
+  background-color: #F5F5F5;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 3px 4px 2px;
+  border: 1px solid #F5F5F5;
+  text-transform: uppercase;
+  margin: 0 2px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.question-timestamp {
+  text-align: right;
+}
+
+.question-answer-wrapper {
+  margin-bottom: 30px;
+}
+
+.question-answer {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.question-header-tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.question-author-footer {
+  margin-right: 7px;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+  /*float: right;*/
+}
+
+@media(max-width: 767px) {
+  .question-title {
+    padding: 0 50px;
+    font-size: 2.2em !important;
+  }
+  .question-post .wrapper {
+    margin-left: -100px;
+    margin-right: -100px;
+    margin-top: -30px;
+    background-color: #1daaa0;
+  }
+}

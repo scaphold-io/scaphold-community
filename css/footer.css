@@ -1,0 +1,77 @@
+.universalFooter {
+  color: black; /* white !important; */
+  background-color: white; /* #54577C !important; */
+  -ms-flex: none;
+  flex: none;
+  padding: 64px 0;
+  border-top: 1px solid #E8E8E8;
+  margin-top: 32px;
+}
+
+.footerRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.footerHeader {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.footerList {
+  font-size: 14px !important;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.footerList li {
+  line-height: 20px;
+}
+
+.footerList a {
+  color: #777; /* #FFF !important; */
+}
+
+.footerList a:hover {
+  color: #333;
+}
+
+.apiStatusHealthyFlag {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00CD8D;
+  display: inline-block;
+}
+
+.apiStatusUnhealthyFlag {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FF4500;
+  display: inline-block;
+}
+
+.footerSocialIcon {
+  /*
+  width: 12.5%;
+  */
+}
+
+.footerCopyright {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 20px;
+}

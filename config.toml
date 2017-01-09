@@ -1,0 +1,16 @@
+siteTitle = "Scaphold"
+baseColor = "#1DAAA0"
+linkPrefix = "/community"
+googleAnalyticsId = "UA-87284467-1"
+blogPosts = [
+  "/blog/2016-12-28-scaphold-2016-year-in-review/",
+  "/blog/2016-11-10-build-realtime-apps-with-subs/",
+  "/blog/2016-10-31-state-of-graphql/",
+  "/blog/2016-07-21-build-better-websites-with-angular2-and-graphql/",
+  "/blog/2016-07-17-payments-api-with-graphql/",
+  "/blog/2016-07-14-2016-07-14-pokemon-go-graphql-with-aws-lambda/",
+  "/blog/2016-06-28-social-auth-graphql/",
+  "/blog/2016-06-14-fastest-way-to-get-started/",
+  "/blog/2016-06-13-graphql-hacks/",
+  "/blog/2016-05-25-scaphold-introduction/"
+]

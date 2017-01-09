@@ -1,0 +1,89 @@
+.learn-list {
+  margin: 64px 0;
+}
+
+.learn-item + .learn-item {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: 1px solid #E0E0E0;
+}
+
+.learn-item-icon-wrapper {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  line-height: 30px;
+  border: 1px solid #1DAAA0;
+  color: #1DAAA0;
+  text-align: center;
+  float: right;
+}
+
+.learn-item-icon-wrapper > span {
+  font-size: 19px;
+  line-height: 38px;
+}
+
+.learn-item-tags {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+
+  display: block;
+  padding: 10px 0 1px;
+  color: #B4BABE;
+
+  float: right;
+  text-align: right;
+}
+
+.learn-item-tag {
+  cursor: pointer;
+}
+
+.learn-item-header {
+  font-weight: 700;
+  font-size: 12px;
+  margin: 2px 0 8px;
+}
+
+.learn-item-author {
+  color: #5A6b77;
+}
+
+.learn-item-date {
+  color: rgba(102, 99, 122, 0.5);
+}
+
+.learn-item-title {
+  font-size: 28px;
+  margin: 0;
+}
+
+.learn-item-content {
+  margin: 10px 0 0;
+}
+
+.learn-item-content > p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.learn-item-footer {
+  margin: 12px 0 0;
+}
+
+.learn-item-footer > .btn {
+  background: 0 0;
+  color: #1DAAA0;
+  min-width: 0;
+  border: 1px solid #1DAAA0;
+}
