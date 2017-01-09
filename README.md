@@ -4,7 +4,7 @@ We're glad you're here! And we're excited for you to be a part of the GraphQL co
 
 Find all the resources you need to go from development to production with GraphQL.
 
-[https://scaphold.io/community/](Check it out here!)
+[Check it out here!](https://scaphold.io/community/)
 
 ## Want to share your content?
 
