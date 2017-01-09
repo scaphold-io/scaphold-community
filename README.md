@@ -1,4 +1,4 @@
-# Scaphold Community Page :house:
+# Scaphold Community Page # :house:
 
 We're glad you're here! And we're excited for you to be a part of the GraphQL commmunity.
 
@@ -12,4 +12,4 @@ Find all the resources you need to go from development to production with GraphQ
 
 We use Gatsby.js to power this page! Read more about it [here](https://github.com/gatsbyjs/gatsby).
 
-*Made with :heart: by Scaphold.io*
+**Made with :heart: by Scaphold.io**
