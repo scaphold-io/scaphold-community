@@ -1,4 +1,4 @@
-# Scaphold Community Page #:house:
+# Scaphold Community Page :house:
 
 We're glad you're here! And we're excited for you to be a part of the GraphQL commmunity.
 
