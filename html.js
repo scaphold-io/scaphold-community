@@ -1,5 +1,5 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 import { config } from 'config'; // eslint-disable-line
 import { TypographyStyle, GoogleFont } from 'react-typography';
@@ -14,7 +14,7 @@ export default class HTML extends React.Component {
   }
 
   render() {
-    const title = DocumentTitle.rewind();
+    const head = Helmet.rewind();
 
     let css;
     if (process.env.NODE_ENV === 'production') {
@@ -24,19 +24,18 @@ export default class HTML extends React.Component {
     return (
       <html lang="en">
         <head>
+          {/* Dynamic meta tags are all handled in pages/index.jsx react-helmet */}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <meta name="description" content="A real-time GraphQL backend platform. Build apps faster with our hosted data and intergrations platform. GraphQL Subscriptions make all of your apps realtime out of the box. Define your data model and instantly get a powerful GraphQL API backed by our highly available infrastructure built on AWS. Build web, mobile, and IOT apps with AngularJS, React, Relay, Apollo Client, Push Notifications, Stripe Payments, Twitter, Facebook, and more. Get started today." />
+          {head.title.toComponent()}
+          {head.meta.toComponent()}
           <meta name="keywords" content="create your own app, graphql service, graphql, ReactJS, make apps faster, best backend, best baas, graphql subscriptions, realtime, mobile app development, app development, firebase, firebase alternative, reactjs, angularjs, apollo client, relayjs" />
           {/* Essential META Tags */}
-          <meta property="og:title" content="Scaphold | Community" />
-          <meta property="og:description" content="Find all the resources you need to launch a production app with GraphQL." />
-          <meta property="og:image" content="https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png" />
-          <meta property="og:url" content="https://scaphold.io/community/" />
+          <meta property="og:type" content="article" />
           <meta name="twitter:card" content="summary_large_image" />
           {/* Non-Essential, But Recommended */}
           <meta property="og:site_name" content="Scaphold | Community" />
@@ -48,7 +47,6 @@ export default class HTML extends React.Component {
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-          <title>{title}</title>
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />
           {css}

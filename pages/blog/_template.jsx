@@ -3,25 +3,13 @@ import { Link } from 'react-router'; // eslint-disable-line
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-// import find from 'lodash/find';
-// import Breakpoint from '../../components/Breakpoint';
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 import { config } from 'config'; // eslint-disable-line
-
-// import typography from '../../utils/typography';
-
-// const { rhythm } = typography;
 
 export default class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    this.handleTopicChange = this.handleTopicChange.bind(this);
-  }
-
-  handleTopicChange(e) {
-    return this.context.router.push(e.target.value);
   }
 
   render() {

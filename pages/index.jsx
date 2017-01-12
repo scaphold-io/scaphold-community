@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router'; // eslint-disable-line
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -50,7 +50,20 @@ export default class CommunityIndex extends React.Component {
     const blog = this.props.route.pages.find(r => r.path === '/blog/2016-12-28-scaphold-2016-year-in-review/');
 
     return (
-      <DocumentTitle title={`${config.siteTitle} | ${CommunityIndex.metadata().title}`}>
+      <div>
+        <Helmet
+          title={`${config.siteTitle} | ${CommunityIndex.metadata().title}`}
+          meta={[
+            {
+              name: 'description',
+              content: 'A real-time GraphQL backend platform. Build apps faster with our hosted data and intergrations platform. GraphQL Subscriptions make all of your apps realtime out of the box. Define your data model and instantly get a powerful GraphQL API backed by our highly available infrastructure built on AWS. Build web, mobile, and IOT apps with AngularJS, React, Relay, Apollo Client, Push Notifications, Stripe Payments, Twitter, Facebook, and more. Get started today.',
+            },
+            { property: 'og:title', content: `${config.siteTitle} | ${CommunityIndex.metadata().title}` },
+            { property: 'og:description', content: CommunityIndex.metadata().description },
+            { property: 'og:image', content: 'https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png' },
+            { property: 'og:url', content: `${config.baseUrl}${config.linkPrefix}${this.props.route.page.path}` },
+          ]}
+        />
         <div className="community-index">
           <div className="wrapper">
             <Row className="community-header">
@@ -62,7 +75,7 @@ export default class CommunityIndex extends React.Component {
               </Col>
             </Row>
             <Row className="community-header-action">
-              <a href="https://scapholdslackin.herokuapp.com" className="btn btn-lg join-slack animated pulse" target="_blank">
+              <a href="http://slack.scaphold.io" className="btn btn-lg join-slack animated pulse" target="_blank">
                 <FontAwesome name="slack" /> Join our Slack
               </a>
             </Row>
@@ -149,7 +162,7 @@ export default class CommunityIndex extends React.Component {
             </Row>
           </Grid>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

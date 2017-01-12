@@ -21,7 +21,7 @@ The nature of the language and the GraphQL server gives developers a chance to f
 
 ![Creators of the prize-winning block chain app at AT&THacks at GSV Labs](https://medium2.global.ssl.fastly.net/max/6528/1*kCAUskEe9RABhEFKRPBBRQ.jpeg)*Creators of the prize-winning block chain app at AT&THacks at GSV Labs*
 
-Apps that modeled and stored Bitcoin block chains, chat bot apps, and music apps were able to build on Scaphold’s GraphQL backend-as-a-service to win prizes in these competitive events. We’re excited to see how they move forward with their ideas and we’re supporting them along the way. If you have a cool app idea that you want to build, reach out to us on [Slack](https://scapholdslackin.herokuapp.com). We’ll be happy to help!
+Apps that modeled and stored Bitcoin block chains, chat bot apps, and music apps were able to build on Scaphold’s GraphQL backend-as-a-service to win prizes in these competitive events. We’re excited to see how they move forward with their ideas and we’re supporting them along the way. If you have a cool app idea that you want to build, reach out to us on [Slack](http://slack.scaphold.io). We’ll be happy to help!
 
 As a result of their feedback, there have also been major improvements to the platform, from a table view explorer, auto-generator for GraphQL queries, as well as File types for media-rich apps. Check them out in the “What’s New” tab on the Scaphold dashboard.
 

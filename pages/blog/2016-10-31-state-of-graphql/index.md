@@ -227,13 +227,13 @@ Analytics tool for your GraphQL server to help you gain insights on your GraphQL
 
 - [Official GraphQL Slack](https://graphql-slack.herokuapp.com/)
 
-- [Scaphold Slack](https://scapholdslackin.herokuapp.com)
+- [Scaphold Slack](http://slack.scaphold.io)
 
 - [Other Community Sites](http://graphql.org/community/)
 
 - [Unofficial List of Resources](https://github.com/chentsulin/awesome-graphql)
 
-If you have other additions to this list that you'd like to add, feel free to contact us at our [Slack channel](https://scapholdslackin.herokuapp.com). Message either @vince or @michael.
+If you have other additions to this list that you'd like to add, feel free to contact us at our [Slack channel](http://slack.scaphold.io). Message either @vince or @michael.
 
 ### Look Out For...
 
@@ -251,6 +251,6 @@ Scaphold is the most productive backend as a service powered by GraphQL. The ful
 
 ### Have Questions?
 
-[Join our Slack channel](https://scapholdslackin.herokuapp.com) to ask us directly!
+[Join our Slack channel](http://slack.scaphold.io) to ask us directly!
 
 And most importantly, **GraphQL First**.

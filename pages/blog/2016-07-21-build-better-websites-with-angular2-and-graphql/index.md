@@ -1372,4 +1372,4 @@ an added bonus, we send our user's thank you notes for their donations!
 **Thanks for reading our tutorial! If any steps were incomplete or unclear, please let us know in the comments below.
 You can also find the [finished project on our github](https://github.com/scaphold-io/save-the-world-tutorial).**
 
-**Please join us on [Slack](https://scapholdslackin.herokuapp.com/)!**
+**Please join us on [Slack](http://slack.scaphold.io)!**

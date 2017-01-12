@@ -422,7 +422,7 @@ Congratulations, you did it! You now have a powerful GraphQL API that you can us
 
 1. We created our first Todo, saw our Slack notification fire, and then used GraphQL to issue a query that returned data from 3 different types in a single round trip!
 
-Thanks for reading! If you liked it, share this tutorial with your friends so they can start easily building GraphQL powered apps as well! We hope you enjoyed this tutorial and would love to hear your feedback in the comments or on [Slack](https://scapholdslackin.herokuapp.com/)!
+Thanks for reading! If you liked it, share this tutorial with your friends so they can start easily building GraphQL powered apps as well! We hope you enjoyed this tutorial and would love to hear your feedback in the comments or on [Slack](http://slack.scaphold.io)!
 
 Also, check back soon for our tutorials on how to build GraphQL powered client apps using React, React Native, and Angular 2.0! Thanks!
 

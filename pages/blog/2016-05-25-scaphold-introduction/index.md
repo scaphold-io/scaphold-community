@@ -33,6 +33,6 @@ And the best part! We did all of that in under 5 minutes!
 
 Although we just showed you how to start building apps with React and Relay, you can create applications on Scaphold using any client framework. Whether you’re building an AngularJS, iOS, Android, or IOT application, you can start building apps on [Scaphold](https://www.scaphold.io) today. To make things even easier, we’ve scaffolded these starter kits for you that you can find on our [Github](https://github.com/scaphold-io)!
 
-Give us your thoughts! We’re Michael Paris and Vincent Ning. Recently, we were accepted into Y Combinator’s Fellowship program, and we’ll be working around the clock to bring you more features. If you’re interested to learn more, please connect with us on [Twitter](https://twitter.com/ScapholdDotIO), [Slack](https://scapholdslackin.herokuapp.com/), [Facebook](https://www.facebook.com/scaphold/), and S[caphold](https://www.scaphold.io)!
+Give us your thoughts! We’re Michael Paris and Vincent Ning. Recently, we were accepted into Y Combinator’s Fellowship program, and we’ll be working around the clock to bring you more features. If you’re interested to learn more, please connect with us on [Twitter](https://twitter.com/ScapholdDotIO), [Slack](http://slack.scaphold.io), [Facebook](https://www.facebook.com/scaphold/), and S[caphold](https://www.scaphold.io)!
 
 *Happy Scapholding!*

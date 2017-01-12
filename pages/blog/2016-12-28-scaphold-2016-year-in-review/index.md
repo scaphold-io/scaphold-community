@@ -80,7 +80,7 @@ All in all, it was a great year for app development. We’ve made tremendous str
 We’re excited to continue marching forward in revolutionizing the app development experience.
 Love what you’re building and excited to hear what Scaphold has in store for you in 2017?
 
-* [**Follow us on Slack!**](https://scapholdslackin.herokuapp.com)
+* [**Follow us on Slack!**](http://slack.scaphold.io)
 * [**Tell your friends. Get $25.**](https://scaphold.io/referral)
 
 <br />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router'; // eslint-disable-line
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -65,82 +65,93 @@ export default class ProjectsIndex extends React.Component {
     const headerColor = pageColorMap[pathKey];
 
     return (
-      <DocumentTitle title={`${config.siteTitle} | ${ProjectsIndex.metadata().title}`}>
-        <div className="">
-          <div className="wrapper" style={{ backgroundColor: headerColor }}>
-            <Grid>
-              <div className="community-header">
-                <h1>{ProjectsIndex.metadata().title}</h1>
-              </div>
-              <div className="community-header-copy">
-                <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={6} smOffset={3} xs={6} xsOffset={3} className="community-copy-wrapper">
-                  <p>{ProjectsIndex.metadata().description}</p>
-                </Col>
-              </div>
-              <Row className="community-header-search">
-                <SearchBar onChangeFilter={this.onChangeFilter} />
-              </Row>
-            </Grid>
-          </div>
-          <Grid fluid>
-            <Row className="community-header-options">
-              <Col lg={12} md={12} sm={12} xs={24}>
-                <div className="community-header-count">
-                  <span className="community-header-number"><b>{filteredProjectsList.length} Projects</b></span>
-                </div>
-                <Button className="community-header-submit" bsStyle="primary" href="mailto:community@scaphold.io?body=Thanks%20for%20contributing%21%0A%0ASend%20us%20a%20message%20outlining%20your%20idea%20or%20join%20us%20on%20Slack%20at%20https%3A%2F%2Fscapholdslackin.herokuapp.com%20and%20contact%20%40michael%20or%20%40vince.%0A%0AThis%20site%20is%20also%20entirely%20open%20source%20so%20feel%20free%20to%20submit%20a%20pull%20request%20directly%20to%20GitHub%20%28https%3A%2F%2Fgithub.com%2Fscaphold-io%2Fscaphold-community%2Fpulls%29%21%0A%0AThanks%21&subject=I%27d%20Like%20To%20Contribute%21">
-                  Submit Project
-                </Button>
+      <div className="">
+        <Helmet
+          title={`${config.siteTitle} | ${ProjectsIndex.metadata().title}`}
+          meta={[
+            {
+              name: 'description',
+              content: `${ProjectsIndex.metadata().description}`,
+            },
+            { property: 'og:title', content: `${config.siteTitle} | ${ProjectsIndex.metadata().title}` },
+            { property: 'og:description', content: ProjectsIndex.metadata().description },
+            { property: 'og:image', content: 'https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png' },
+            { property: 'og:url', content: `${config.baseUrl}${config.linkPrefix}${this.props.route.page.path}` },
+          ]}
+        />
+        <div className="wrapper" style={{ backgroundColor: headerColor }}>
+          <Grid>
+            <div className="community-header">
+              <h1>{ProjectsIndex.metadata().title}</h1>
+            </div>
+            <div className="community-header-copy">
+              <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={6} smOffset={3} xs={6} xsOffset={3} className="community-copy-wrapper">
+                <p>{ProjectsIndex.metadata().description}</p>
               </Col>
-            </Row>
-            <Row className="projects-list">
-              {
-                filteredProjectsList.map((project, i) => {
-                  const descriptionPopover = (
-                    <Popover id="project-popover-trigger-hover-focus" title={project.title}>
-                      {project.description}
-                    </Popover>
-                  );
-                  return (
-                    <Col lg={4} md={4} sm={4} xs={12} key={i}>
-                      <a href={project.url} target="_blank">
-                        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={descriptionPopover}>
-                          <Panel className="project-item">
-                            <Row className="project-img-wrapper">
-                              <Col
-                                lg={4}
-                                lgOffset={4}
-                                md={4}
-                                mdOffset={4}
-                                sm={4}
-                                smOffset={4}
-                                xs={4}
-                                xsOffset={4}
-                              >
-                                <Image src={project.img} className="project-img" />
-                              </Col>
-                            </Row>
-                            <div className="project-title">
-                              <h3>
-                                {project.title}
-                              </h3>
-                              <div className="project-meta">
-                                <p className="project-author">
-                                  by <span>{project.author}</span>
-                                </p>
-                              </div>
-                            </div>
-                          </Panel>
-                        </OverlayTrigger>
-                      </a>
-                    </Col>
-                  );
-                })
-              }
+            </div>
+            <Row className="community-header-search">
+              <SearchBar onChangeFilter={this.onChangeFilter} />
             </Row>
           </Grid>
         </div>
-      </DocumentTitle>
+        <Grid fluid>
+          <Row className="community-header-options">
+            <Col lg={12} md={12} sm={12} xs={24}>
+              <div className="community-header-count">
+                <span className="community-header-number"><b>{filteredProjectsList.length} Projects</b></span>
+              </div>
+              <Button className="community-header-submit" bsStyle="primary" href="mailto:community@scaphold.io?body=Thanks%20for%20contributing%21%0A%0ASend%20us%20a%20message%20outlining%20your%20idea%20or%20join%20us%20on%20Slack%20at%20https%3A%2F%2Fscapholdslackin.herokuapp.com%20and%20contact%20%40michael%20or%20%40vince.%0A%0AThis%20site%20is%20also%20entirely%20open%20source%20so%20feel%20free%20to%20submit%20a%20pull%20request%20directly%20to%20GitHub%20%28https%3A%2F%2Fgithub.com%2Fscaphold-io%2Fscaphold-community%2Fpulls%29%21%0A%0AThanks%21&subject=I%27d%20Like%20To%20Contribute%21">
+                Submit Project
+              </Button>
+            </Col>
+          </Row>
+          <Row className="projects-list">
+            {
+              filteredProjectsList.map((project, i) => {
+                const descriptionPopover = (
+                  <Popover id="project-popover-trigger-hover-focus" title={project.title}>
+                    {project.description}
+                  </Popover>
+                );
+                return (
+                  <Col lg={4} md={4} sm={4} xs={12} key={i}>
+                    <a href={project.url} target="_blank">
+                      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={descriptionPopover}>
+                        <Panel className="project-item">
+                          <Row className="project-img-wrapper">
+                            <Col
+                              lg={4}
+                              lgOffset={4}
+                              md={4}
+                              mdOffset={4}
+                              sm={4}
+                              smOffset={4}
+                              xs={4}
+                              xsOffset={4}
+                            >
+                              <Image src={project.img} className="project-img" />
+                            </Col>
+                          </Row>
+                          <div className="project-title">
+                            <h3>
+                              {project.title}
+                            </h3>
+                            <div className="project-meta">
+                              <p className="project-author">
+                                by <span>{project.author}</span>
+                              </p>
+                            </div>
+                          </div>
+                        </Panel>
+                      </OverlayTrigger>
+                    </a>
+                  </Col>
+                );
+              })
+            }
+          </Row>
+        </Grid>
+      </div>
     );
   }
 }

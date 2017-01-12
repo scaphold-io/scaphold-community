@@ -1,8 +1,10 @@
 siteTitle = "Scaphold"
 baseColor = "#1DAAA0"
+baseUrl = "https://scaphold.io"
 linkPrefix = "/community"
 googleAnalyticsId = "UA-87284467-1"
 blogPosts = [
+  "/blog/2016-01-11-introduction-logic/",
   "/blog/2016-12-28-scaphold-2016-year-in-review/",
   "/blog/2016-11-10-build-realtime-apps-with-subs/",
   "/blog/2016-10-31-state-of-graphql/",

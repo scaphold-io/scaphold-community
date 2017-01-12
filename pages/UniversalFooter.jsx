@@ -23,7 +23,7 @@ export default class UniversalFooter extends React.Component {
       <footer className={classNames('universalFooter', this.props.className)}>
         <Grid>
           <Row className={'footerRow'}>
-            <Col lg={3} md={3} sm={3} xs={5}>
+            <Col lg={3} md={3} sm={3} xs={12}>
               <h4 className={'footerHeader'}>Company</h4>
               <ul className={'footerList'}>
                 <li>
@@ -48,7 +48,7 @@ export default class UniversalFooter extends React.Component {
                 */}
               </ul>
             </Col>
-            <Col lg={3} md={3} sm={3} xs={5}>
+            <Col lg={3} md={3} sm={3} xs={12}>
               <h4 className={'footerHeader'}>Learn More</h4>
               <ul className={'footerList'}>
                 <li>
@@ -115,7 +115,7 @@ export default class UniversalFooter extends React.Component {
                 </li>
               </ul>
             </Col>
-            <Col lg={3} md={3} sm={3} xs={5}>
+            <Col lg={3} md={3} sm={3} xs={12}>
               <h4 className={'footerHeader'}>Community</h4>
               <ul className={'footerList'}>
                 <li>
@@ -136,7 +136,7 @@ export default class UniversalFooter extends React.Component {
                 </li>
                 <li>
                   <a
-                    href="https://scapholdslackin.herokuapp.com"
+                    href="http://slack.scaphold.io"
                     target="_blank" // eslint-disable-line
                   >
                     <b>Join our Slack!</b>&nbsp;
@@ -145,49 +145,49 @@ export default class UniversalFooter extends React.Component {
                 </li>
               </ul>
             </Col>
-            <Col lg={2} md={2} sm={2} xs={5}>
+            <Col lg={2} md={2} sm={2} xs={12}>
               <h4 className={'footerHeader'}>
                 <Row>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a
                       href="https://twitter.com/ScapholdDotIO"
                       target="_blank" // eslint-disable-line
                     ><FontAwesome name="twitter" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a
                       href="https://www.facebook.com/scaphold/"
                       target="_blank" // eslint-disable-line
                     ><FontAwesome name="facebook" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a href="https://github.com/scaphold-io"><FontAwesome name="github" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a
                       href="https://www.youtube.com/channel/UC3CKbmn1jYp5fRoCIiBrsGg"
                       target="_blank" // eslint-disable-line
                     ><FontAwesome name="youtube" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a
-                      href="https://www.linkedin.com/company/10780129"
+                      href="https://www.linkedin.com/company/10780119"
                       target="_blank" // eslint-disable-line
                     ><FontAwesome name="linkedin" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a
                       href="https://medium.com/scaphold"
                       target="_blank" // eslint-disable-line
                     ><FontAwesome name="medium" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a
-                      href="https://scapholdslackin.herokuapp.com/"
+                      href="http://slack.scaphold.io"
                       target="_blank" // eslint-disable-line
                     ><FontAwesome name="slack" className={'footerSocialIcon'} /></a>
                   </Col>
-                  <Col md={1} sm={1} xs={2}>
+                  <Col md={1} sm={1} xs={1}>
                     <a href="mailto:community@scaphold.io">
                       <FontAwesome name="envelope" className={'footerSocialIcon'} />
                     </a>

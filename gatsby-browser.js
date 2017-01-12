@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
   ReactGA.initialize('UA-87277684-1');
 }
 
-exports.onRouteUpdate = (state, page, pages) => {
+exports.onRouteUpdate = (state, page, pages) => { // eslint-disable-line
   if (ReactGA) {
     ReactGA.pageview(state.pathname);
   }

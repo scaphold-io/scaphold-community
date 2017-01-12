@@ -1,4 +1,9 @@
 import React from 'react';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+
+import CreateApp from '../images/questions/Create_App.png';
+import CreateAppModal from '../images/questions/Create_App_Modal.png';
 
 export default [
   {
@@ -213,38 +218,65 @@ export default [
   },
   // {
   //   title: 'GraphQL vs. REST',
-  //   description: '',
-  //   askedBy: 'Vince Ning',
+  //   description: 'Main differences between GraphQL and REST.',
+  //   askedBy: 'Jordan Gonen',
   //   answeredBy: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00',
+  //   createdAt: '2017-01-08 00:00:00',
   //   tags: ['GraphQL', 'REST'],
   //   url: '/questions/graphql-vs-rest/',
-  //   answer: `
-  //     Android and iOS mobile push notifications can be a crucial part of your mobile applications. However, it's
-  //     definitely not the easiest process to set up, let alone setting it up with GraphQL.
-  //     Normally, you'd have to save your authentication key file to be able to interact with
-  //     GCM or APNS for push notifications as well as manage your device tokens. With Scaphold, you can
-  //     upload your key in the integrations portal, and you'll immediately be able to push to other
-  //     users in your app. Scaphold stores the key on AWS and you can start pushing device tokens
-  //     that associate with your currently authenticated user. From then on, you can send Android or iOS push
-  //     notifications directly to users given their IDs with the exposed GraphQL mutations and that user will
-  //     receive the push notification on his or her device.
-  //   `,
-  // },
-  // {
-  //   title: 'How to create an app on Scaphold?',
-  //   description: 'Steps to create a Scaphold app.',
-  //   askedBy: 'Sean Cheng',
-  //   answeredBy: 'Vince Ning',
-  //   createdAt: '2017-01-07 00:00:00',
-  //   tags: ['GraphQL', 'Create', 'App'],
-  //   url: '/questions/how-to-create-an-app-on-scaphold/',
-  //   answer: (
-  //     <div>
-  //       There are a couple
-  //     </div>
+  //   answer: (''
+  //     // 1. type system
+  //     // 2. single api
+  //     // 3. data source agnostic
+  //     // 4. declarative
+  //     // 5. client-driven queries
+  //     // 6. GraphQL w/ REST
+  //     // 7. It is its own standard language
   //   ),
   // },
+  {
+    title: 'How to create an app on Scaphold?',
+    description: 'Steps to create a Scaphold app.',
+    askedBy: 'Sean Cheng',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-10 00:00:00',
+    tags: ['GraphQL', 'Create', 'App'],
+    url: '/questions/how-to-create-a-graphql-app-on-scaphold/',
+    answer: (
+      <div>
+        <p>
+          Creating an app on Scaphold is simple! We've streamlined the process into 3 simple steps:
+        </p>
+        <ol>
+          <li>
+            Go to <a href="https://scaphold.io?signupModal=true&source=community">Scaphold.io</a> and sign up for a free account.
+          </li>
+          <li>
+            Click <code>Create App</code> on the Apps Dashboard.
+            A form will drop down asking you for details about your app.
+          </li>
+          <div style={{ textAlign: 'center' }}>
+            <img src={CreateApp} alt="Create app" height="400px" />
+          </div>
+          <li>
+            Fill out the form with your desired app name, description, and alias,
+            and select the <code>Create</code> button.
+          </li>
+          <div style={{ textAlign: 'center' }}>
+            <img src={CreateAppModal} alt="Create app modal" height="400px" />
+          </div>
+        </ol>
+        <p>
+          Violá! You will now be directed to the Schema Designer, and your GraphQL app
+          is instantly deployed with a basic GraphQL schema visually represented
+          in the Scaphold portal. You now have authentication, ability to execute
+          complex queries, real-time subscriptions, analytics, and much more right
+          out of the box with your GraphQL app that abides by the open standard down
+          to the Relay spec.
+        </p>
+      </div>
+    ),
+  },
   {
     title: 'How to handle payments with GraphQL?',
     description: 'Using the Stripe integration.',
@@ -274,13 +306,13 @@ export default [
     ),
   },
   {
-    title: 'How to implement custom business logic?',
+    title: 'How to implement custom business logic with AWS Lambda and GraphQL?',
     description: 'Using AWS Lambda with Scaphold.',
     askedBy: 'Vince Ning',
     answeredBy: 'Vince Ning',
     createdAt: '2017-01-06 00:00:00',
     tags: ['GraphQL', 'AWS Lambda', 'Custom'],
-    url: '/questions/how-to-implement-custom-business-logic/',
+    url: '/questions/how-to-implement-custom-business-logic-with-aws-lambda/',
     answer: (
       <div>
         <p>
@@ -440,27 +472,90 @@ export default [
   //     https://scaphold.io to get started!
   //   `,
   // },
-  // {
-  //   title: 'What is Scaphold?',
-  //   description: 'Conceptual idea behind GraphQL.',
-  //   askedBy: 'Vince Ning',
-  //   answeredBy: 'Vince Ning',
-  //   createdAt: '2017-01-06 00:00:00',
-  //   tags: ['GraphQL', 'Scaphold'],
-  //   url: '/questions/what-is-scaphold/',
-  //   answer: `
-  //     GraphQL is a new application level query language recently released by Facebook.
-  //     Since its release, developer communities around the world have speculated that GraphQL
-  //     may very well be the future of APIs. Particularly, the ReactJS community has embraced
-  //     GraphQL as a more functional replacement for REST. Coupled with the growing popularity
-  //     of RelayJS, a GraphQL-optimized network layer for ReactJS apps, adoption has been
-  //     accelerated tremendously. Our mission at Scaphold is to champion GraphQL so that you,
-  //     the technological creators of the world, can begin to use this awesome technology.
-  //     The Scaphold platform offers a feature-rich, backend solution that empowers any developer
-  //     to start building GraphQL-powered apps in just a few clicks. Sign up today at
-  //     https://scaphold.io to get started!
-  //   `,
-  // },
+  {
+    title: 'What is Scaphold?',
+    description: 'GraphQL backend as a service.',
+    askedBy: 'Jordan Gonen',
+    answeredBy: 'Vince Ning',
+    createdAt: '2017-01-11 00:00:00',
+    tags: ['GraphQL', 'Scaphold'],
+    url: '/questions/what-is-scaphold/',
+    answer: (
+      <div>
+        <h2><b>Scaphold is...</b></h2>
+        <p>
+          A GraphQL backend as a service that helps you rapidly develop apps and launch
+          them into production in a matter of minutes. We provide a several key features and tools
+          that help you build apps faster than ever before.
+        </p>
+        <img src="https://assets.scaphold.io/v2/Scaphold_Landing.png" alt="Scaphold.io" />
+        <hr />
+        <p>
+          We're always improving the platform, but some of our best features include:
+        </p>
+        <ol>
+          <li>
+            <b>Deploy in seconds</b>
+            <p>Spin up a scalable GraphQL server in 30 seconds. No coding required.</p>
+          </li>
+          <li>
+            <b>Easily model complex data</b>
+            <p>
+              Creating your data model with Scaphold's intuitive Schema Designer is a breeze.
+              Highly-available infrastructure is automatically configured to fit your needs.
+            </p>
+          </li>
+          <li>
+            <b>Integrate popular services</b>
+            <p>
+              Integrate the services you need to build your business.
+              Push notifications, payments, email, and more are available in a single click!
+            </p>
+          </li>
+          <li>
+            <b>Real-time with 0 setup</b>
+            <p>
+              Your app is real-time out of the box. Use GraphQL Subscriptions to easily create
+              messaging apps, real-time games, and more!
+            </p>
+          </li>
+          <li>
+            <b>Teams work together</b>
+            <p>
+              Awesome apps are built by awesome teams! Scaphold allows teams of any size to
+              collaborate seamlessly.
+            </p>
+          </li>
+          <li>
+            <b>Unbeatably fast global network</b>
+            <p>
+              Your data should live close to your users. Deploy your apps in the region that
+              provides the best experience for your customers.
+            </p>
+          </li>
+          <li>
+            <b>Custom business logic</b>
+            <p>
+              You can easily implement custom logic (i.e. business logic) for your app workflow
+              through GraphQL.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Thousands of developers and engineering teams trust Scaphold to power their
+          apps of all kinds. Whether you're building a web, mobile, IOT, or virtual
+          reality app, we've got you covered.
+        </p>
+        <p>
+          To learn more about how to get started fast, <a href="https://scaphold.io/community/learn" target="_blank">
+          check out some of resources</a> we've recently added the site and <a href="https://scaphold.io" target="_blank">create awesome apps today</a>.
+          Be on the lookout for new features as we release new updates daily.
+          And if you have any questions or need help getting started, please <a href="http://slack.scaphold.io" target="_blank">join our Slack</a> or <a href="mailto:hi@scaphold.io">
+          email us!</a>
+        </p>
+      </div>
+    ),
+  },
   {
     title: 'When is GraphQL Summit?',
     description: 'Looking to attend a GraphQL event?',
@@ -480,6 +575,53 @@ export default [
           The first-ever GraphQL Summit was held in late August 2016, and the next one will be
           held in the fall of 2017. You can <a href="http://www.graphql.com/summit/" target="_blank">read more about the details
           as they unveil here.</a>
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'How to implement custom business logic with Scaphold Logic?',
+    description: 'Using a microservice with Scaphold.',
+    askedBy: 'Rohit Ravikoti',
+    answeredBy: 'Michael Paris',
+    createdAt: '2017-01-09 00:00:00',
+    tags: ['GraphQL', 'Microservice', 'Custom', 'Business'],
+    url: '/questions/how-to-implement-custom-business-logic-with-graphql/',
+    answer: (
+      <div>
+        <p>
+          On Scaphold, you can easily implement custom logic (i.e. business logic) for your
+          app workflow through GraphQL via Scaphold's Logic page. There's a couple basic
+          steps involved:
+        </p>
+        <ol>
+          <li>
+            Host your custom logic on a cloud provider like <a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a> or <a href="https://azure.microsoft.com/en-us/services/functions/" target="_blank">Azure Functions</a>.
+            You may also host it yourself anywhere as long as you get a URL that Scaphold
+            can make a request to.
+          </li>
+          <li>
+            With the URL that points to your hosted microservice, create a Logic function
+            on Scaphold and define the configuration for the data you want sent over to your
+            webhook, the mutation in your GraphQL API upon which you want it to fire, as well
+            as any request headers.
+          </li>
+        </ol>
+        <div style={{ textAlign: 'center' }}>
+          <img src="../../images/projects/mailchimp-webtask.png" alt="mailchimp-webtask" width="25%" />
+        </div>
+        <p>
+          You can watch this quick video on how to set up your custom logic on Scaphold.
+          In this video, we use <a href="https://mailchimp.com/">MailChimp</a> and <a href="https://webtask.io/">Webtask.io</a> to set up a simple
+          webhook to add a user to a mailing list when they sign up for a service.
+        </p>
+        <Row>
+          <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={6} smOffset={3} xs={12} className="community-featured-video-wrapper">
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/hv3FQY6iipQ" frameBorder="0" allowFullScreen />
+          </Col>
+        </Row>
+        <p>
+          You can <a href="https://github.com/scaphold-io/scaphold-business-logic-examples" target="_blank">download the code here on GitHub</a> or read more about implementation details <a href="https://scaphold.io/docs/#webhooks" target="_blank">here in our documentation</a> as well.
         </p>
       </div>
     ),
