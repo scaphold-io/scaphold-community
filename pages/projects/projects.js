@@ -12,6 +12,7 @@ import ReactVue2Apollo from '../images/projects/react-vue2-apollo.png';
 import MailchimpWebtask from '../images/projects/mailchimp-webtask.png';
 import CerebralGraphQL from '../images/projects/cerebral-graphql.png';
 import GearVRCardboard from '../images/projects/gearvr-googlecardboard.png';
+import ReactReduxApollo from '../images/projects/react-redux-apollo.png';
 
 export default [
   {
@@ -86,7 +87,7 @@ export default [
   },
   {
     title: 'Scaphold Contrib Statics',
-    author: 'MacKentoch',
+    author: 'Erwan DATIN (MacKentoch)',
     url: 'https://github.com/MacKentoch/scaphold-contrib-statics',
     description: 'Scaphold statics assets (print screen, piece of code...)',
     img: GraphQLScaphold || ScapholdLogo,
@@ -118,5 +119,12 @@ export default [
     url: 'https://github.com/scaphold-io/graphql-subscriptions-realtime-starter-kit',
     description: 'Scaphold.io\'s Starter Kit for building real-time apps with GraphQL Subscriptions',
     img: GraphQLScaphold || ScapholdLogo,
+  },
+  {
+    title: 'react-redux-graphql-apollo-bootstrap-webpack-starter',
+    author: 'Erwan DATIN (MacKentoch)',
+    url: 'https://github.com/MacKentoch/react-redux-graphql-apollo-bootstrap-webpack-starter',
+    description: 'React + React-Router + Redux + GraphQL + Apollo +Bootstrap STARTER (with user authentication)',
+    img: ReactReduxApollo || ScapholdLogo,
   },
 ];
