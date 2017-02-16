@@ -4,6 +4,10 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import { config } from 'config'; // eslint-disable-line
 import ReactDisqusThread from 'react-disqus-thread';
+import './md.css';
+// import '../css/github.css';
+// import 'prismjs/prism'
+// import 'prismjs/themes/prism-tomorrow.css';
 
 export default class MD extends React.Component {
   constructor(props) {
@@ -13,9 +17,9 @@ export default class MD extends React.Component {
 
   render() {
     const post = this.props.route.page.data;
-    let subTitle = ' | Community';
+    let subTitle = 'Scaphold Community | ';
     if (post.title) {
-      subTitle = ` | ${post.title}`;
+      subTitle = `${post.title} | `;
     }
 
     return (
@@ -23,7 +27,7 @@ export default class MD extends React.Component {
         {
           post ? (
             <Helmet
-              title={`${config.siteTitle}${subTitle}`}
+              title={`${subTitle}${config.siteTitle}`}
               meta={[
                 { name: 'description', content: post.description },
                 { property: 'og:title', content: post.title },
@@ -32,7 +36,7 @@ export default class MD extends React.Component {
                 { property: 'og:url', content: `${config.baseUrl}${config.linkPrefix}${this.props.route.page.path}` },
               ]}
             />
-          ) : (<Helmet title={`${config.siteTitle}${subTitle}`} />)
+          ) : (<Helmet title={`${subTitle}${config.siteTitle}`} />)
         }
         <div className="wrapper">
           <Grid className="community-header-wrapper">
@@ -51,11 +55,6 @@ export default class MD extends React.Component {
         <div className="content-wrapper">
           <div dangerouslySetInnerHTML={{ __html: post.body }} />
         </div>
-        <ReactDisqusThread
-          shortname="scaphold-community"
-          identifier={this.props.location.pathname}
-          title="Scaphold Community"
-        />
       </div>
     );
   }

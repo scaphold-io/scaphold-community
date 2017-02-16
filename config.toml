@@ -4,15 +4,25 @@ baseUrl = "https://scaphold.io"
 linkPrefix = "/community"
 googleAnalyticsId = "UA-87284467-1"
 blogPosts = [
-  "/blog/2016-01-11-introduction-logic/",
-  "/blog/2016-12-28-scaphold-2016-year-in-review/",
-  "/blog/2016-11-10-build-realtime-apps-with-subs/",
-  "/blog/2016-10-31-state-of-graphql/",
-  "/blog/2016-07-21-build-better-websites-with-angular2-and-graphql/",
-  "/blog/2016-07-17-payments-api-with-graphql/",
-  "/blog/2016-07-14-2016-07-14-pokemon-go-graphql-with-aws-lambda/",
-  "/blog/2016-06-28-social-auth-graphql/",
-  "/blog/2016-06-14-fastest-way-to-get-started/",
-  "/blog/2016-06-13-graphql-hacks/",
-  "/blog/2016-05-25-scaphold-introduction/"
+  "/blog/send-push-notifications-scaphold-graphql/",
+  "/blog/iOS-push-notifications-with-graphql/",
+  "/blog/android-push-notifications-with-graphql/",
+  "/blog/apollo-optics-and-your-graphql-server/",
+  "/blog/algolia-powers-thousands-of-scaphold-apps/",
+  "/blog/authentication-in-graphql/",
+  "/blog/querying-relational-data-with-graphql/",
+  "/blog/initial-impressions-scaphold/",
+  "/blog/aggregations-in-graphql/",
+  "/blog/migrate-mongodb-to-graphql/",
+  "/blog/introduction-logic/",
+  "/blog/scaphold-2016-year-in-review/",
+  "/blog/build-realtime-apps-with-subs/",
+  "/blog/state-of-graphql/",
+  "/blog/build-better-websites-with-angular2-and-graphql/",
+  "/blog/payments-api-with-graphql/",
+  "/blog/pokemon-go-graphql-with-aws-lambda/",
+  "/blog/social-auth-graphql/",
+  "/blog/fastest-way-to-get-started/",
+  "/blog/graphql-hacks/",
+  "/blog/scaphold-introduction/"
 ]

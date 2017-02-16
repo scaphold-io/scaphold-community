@@ -53,7 +53,8 @@
         "react/jsx-no-target-blank": 0,
         "react/no-unescaped-entities": 0,
         "react/no-danger": 0,
-        "no-eval": 0
+        "no-eval": 0,
+        "global-require": 0
     },
     "env": {
         "node": true,

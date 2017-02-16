@@ -5,7 +5,7 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
-import FontAwesome from 'react-fontawesome';
+// import FontAwesome from 'react-fontawesome';
 import { config } from 'config'; // eslint-disable-line
 import Fuse from 'fuse.js';
 import sortBy from 'lodash/sortBy';
@@ -70,17 +70,25 @@ export default class LearnIndex extends React.Component {
     const path = this.props.route.page.path;
     const pathKey = `${path.substring(1, path.length - 1)}`;
     const headerColor = pageColorMap[pathKey];
+    const asCols = [];
+    for (let i = 0; i < filteredGuidesList.length; i += 2) {
+      if (filteredGuidesList.length > i + 1) {
+        asCols.push([filteredGuidesList[i], filteredGuidesList[i + 1]]);
+      } else {
+        asCols.push([filteredGuidesList[i]]);
+      }
+    }
 
     return (
       <div className="">
         <Helmet
-          title={`${config.siteTitle} | ${LearnIndex.metadata().title}`}
+          title={`${LearnIndex.metadata().title} | ${config.siteTitle}`}
           meta={[
             {
               name: 'description',
               content: `${LearnIndex.metadata().description}`,
             },
-            { property: 'og:title', content: `${config.siteTitle} | ${LearnIndex.metadata().title}` },
+            { property: 'og:title', content: `${LearnIndex.metadata().title} | ${config.siteTitle}` },
             { property: 'og:description', content: LearnIndex.metadata().description },
             { property: 'og:image', content: 'https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png' },
             { property: 'og:url', content: `${config.baseUrl}${config.linkPrefix}${this.props.route.page.path}` },
@@ -101,34 +109,70 @@ export default class LearnIndex extends React.Component {
             </Row>
           </Grid>
         </div>
-        <Grid fluid>
+        <Grid>
           <Row className="community-header-options">
             <Col lg={12} md={12} sm={12} xs={24}>
               <div className="community-header-count">
                 <span className="community-header-number"><b>{filteredGuidesList.length} Resources</b></span>
               </div>
-              <Button className="community-header-submit" bsStyle="primary" href="mailto:community@scaphold.io?body=Thanks%20for%20contributing%21%0A%0ASend%20us%20a%20message%20outlining%20your%20idea%20or%20join%20us%20on%20Slack%20at%20https%3A%2F%2Fscapholdslackin.herokuapp.com%20and%20contact%20%40michael%20or%20%40vince.%0A%0AThis%20site%20is%20also%20entirely%20open%20source%20so%20feel%20free%20to%20submit%20a%20pull%20request%20directly%20to%20GitHub%20%28https%3A%2F%2Fgithub.com%2Fscaphold-io%2Fscaphold-community%2Fpulls%29%21%0A%0AThanks%21&subject=I%27d%20Like%20To%20Contribute%21">
+              <Button className="community-header-submit" bsStyle="primary" onClick={() => { window.Intercom('show'); }}>
                 Submit Resource
               </Button>
             </Col>
           </Row>
-          <Row className="learn-list">
-            {
-              filteredGuidesList.map((guide, i) => (
-                <Col lg={10} lgOffset={1} md={10} mdOffset={1} sm={10} smOffset={1} xs={12} key={i} className="learn-item">
-                  <article>
-                    <Row>
-                      <Col lg={2} md={2} sm={2} xs={2}>
-                        <span className="learn-item-icon-wrapper">
-                          {
-                            guide.tags && guide.tags.length > 1 ?
-                              <FontAwesome name="tags" /> : <FontAwesome name="tag" />
-                          }
-                        </span>
-                        <br />
-                        <br />
-                        <br />
-                        <p className="learn-item-tags">
+          {
+            asCols.map((leftRight, j) => (
+              <Row className="learn-list" key={j}>
+                {leftRight.map((guide, i) => (
+                  <Col lg={6} md={6} sm={12} xs={12} key={i}>
+                    <article className="learn-item">
+                      <header>
+                        <h4 className="learn-item-header">
+                          <b>
+                            <span className="learn-item-author">
+                              {guide.author}
+                            </span>
+                            &nbsp;&mdash;&nbsp;
+                            <span className="learn-item-date">{new Date(guide.createdAt).toLocaleDateString()}</span>
+                          </b>
+                        </h4>
+                        <h1 className="learn-item-title">
+                          <a href={guide.url} target="_blank">
+                            {guide.title}
+                          </a>
+                        </h1>
+                      </header>
+                      <div className="learn-item-content">
+                        <p>{guide.description}</p>
+                      </div>
+                      <div className="learn-img-wrapper">
+                        {
+                          guide.img ?
+                            <img
+                              style={{
+                                marginRight: '25px',
+                                marginBottom: '0',
+                                height: '75px',
+                                width: 'auto',
+                              }}
+                              alt={guide.title}
+                              src={guide.img}
+                            /> : null
+                        }
+                      </div>
+                      <footer className="btn-group learn-item-footer">
+                        <a href={guide.url} className="btn" target="_blank">Read more</a>
+                      </footer>
+                      <div className="learn-item-tags-wrapper">
+                        {/*
+                          <span className="learn-item-icon-wrapper">
+                            {
+                              guide.tags && guide.tags.length > 1 ?
+                                <FontAwesome name="tags" /> : <FontAwesome name="tag" />
+                            }
+                          </span>
+                        */}
+                        <span className="learn-item-tags">
                           {
                             guide.tags && guide.tags.length ?
                               guide.tags.map((tag, j) => (
@@ -137,42 +181,18 @@ export default class LearnIndex extends React.Component {
                                   className="learn-item-tag"
                                   onClick={() => this.setFilter(tag)}
                                 >
-                                  #{tag}<br />
+                                  #{tag}
                                 </span>
                               )) : ''
                           }
-                        </p>
-                      </Col>
-                      <Col lg={10} md={10} sm={10} xs={10}>
-                        <header>
-                          <h4 className="learn-item-header">
-                            <b>
-                              <span className="learn-item-author">
-                                {guide.author}
-                              </span>
-                              &nbsp;&mdash;&nbsp;
-                              <span className="learn-item-date">{new Date(guide.createdAt).toLocaleDateString()}</span>
-                            </b>
-                          </h4>
-                          <h1 className="learn-item-title">
-                            <a href={guide.url} target="_blank">
-                              {guide.title}
-                            </a>
-                          </h1>
-                        </header>
-                        <div className="learn-item-content">
-                          <p>{guide.description}</p>
-                        </div>
-                        <footer className="btn-group learn-item-footer">
-                          <a href={guide.url} className="btn" target="_blank">Read more</a>
-                        </footer>
-                      </Col>
-                    </Row>
-                  </article>
-                </Col>
-              ))
-            }
-          </Row>
+                        </span>
+                      </div>
+                    </article>
+                  </Col>
+                ))}
+              </Row>
+            ))
+          }
         </Grid>
       </div>
     );

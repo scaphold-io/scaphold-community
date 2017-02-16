@@ -9,8 +9,8 @@ import FontAwesome from 'react-fontawesome';
 import { config } from 'config'; // eslint-disable-line
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 
-import ReactVue2Apollo from './images/projects/react-vue2-apollo.png';
-import GraphQLLogo from './images/graphql.png';
+import GearVRCardboard from './images/projects/gearvr-googlecardboard.png';
+import GuideLogo from './images/blog/auth/authicon.png';
 
 export default class CommunityIndex extends React.Component {
   static metadata() {
@@ -26,39 +26,38 @@ export default class CommunityIndex extends React.Component {
   }
 
   render() {
-    // const featuredProjects = [projects[5], projects[3], projects[4]];
     // Featured Project
     const project = {
-      title: 'React + Vue2 + Apollo',
-      author: 'kristianmandrup',
-      url: 'https://github.com/kristianmandrup/react-vue2-apollo-starter-kit',
-      description: 'Apollo starter kit for React and Vue2 with GraphQL for scaphold.io',
-      img: ReactVue2Apollo,
+      title: 'React Virtual Reality',
+      author: 'Scaphold.io',
+      url: 'https://github.com/scaphold-io/react-vr-graphql',
+      description: 'A starter kit to help you create awesome VR applications with React Native and GraphQL!',
+      img: GearVRCardboard,
     };
     // Featured Guide
     const guide = {
-      title: 'Learn GraphQL',
-      author: 'Kadira',
-      url: 'https://learngraphql.com/',
-      description: 'Learn GraphQL with an hour-long guide that will walk you through how GraphQL fits into your architecture, creating a schema, and executing queries.',
-      createdAt: '2015-06-01 00:00:00',
-      tags: ['GraphQL', 'Tutorial'],
-      img: GraphQLLogo,
+      title: 'Authentication in GraphQL',
+      author: 'Michael Paris',
+      url: prefixLink('/blog/authentication-in-graphql/'),
+      description: 'Learn how to authenticate your own GraphQL APIs and use Scaphold\'s built in authentication & authorization',
+      createdAt: '2017-02-07 00:00:00',
+      tags: ['GraphQL', 'Authentication', 'Security'],
+      img: GuideLogo,
     };
     // Featured Blog
-    const blogUrl = '/blog/2016-12-28-scaphold-2016-year-in-review/';
-    const blog = this.props.route.pages.find(r => r.path === '/blog/2016-12-28-scaphold-2016-year-in-review/');
+    const blogUrl = '/blog/migrate-mongodb-to-graphql/';
+    const blog = this.props.route.pages.find(r => r.path === '/blog/migrate-mongodb-to-graphql/');
 
     return (
       <div>
         <Helmet
-          title={`${config.siteTitle} | ${CommunityIndex.metadata().title}`}
+          title={`${CommunityIndex.metadata().title} | ${config.siteTitle}`}
           meta={[
             {
               name: 'description',
               content: 'A real-time GraphQL backend platform. Build apps faster with our hosted data and intergrations platform. GraphQL Subscriptions make all of your apps realtime out of the box. Define your data model and instantly get a powerful GraphQL API backed by our highly available infrastructure built on AWS. Build web, mobile, and IOT apps with AngularJS, React, Relay, Apollo Client, Push Notifications, Stripe Payments, Twitter, Facebook, and more. Get started today.',
             },
-            { property: 'og:title', content: `${config.siteTitle} | ${CommunityIndex.metadata().title}` },
+            { property: 'og:title', content: `${CommunityIndex.metadata().title} | ${config.siteTitle}` },
             { property: 'og:description', content: CommunityIndex.metadata().description },
             { property: 'og:image', content: 'https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png' },
             { property: 'og:url', content: `${config.baseUrl}${config.linkPrefix}${this.props.route.page.path}` },
@@ -100,7 +99,7 @@ export default class CommunityIndex extends React.Component {
               */}
               <Col lg={4} md={4} sm={4} xs={12} className="community-feature animated fadeIn feature-1">
                 <a href={guide.url} target="_blank">
-                  <Image src={guide.img} alt={`Learning Guide`} style={{ maxWidth: '100px' }} />
+                  <Image src={guide.img} alt={`Auth with GraphQL`} style={{ maxWidth: '100px' }} />
                 </a>
                 <h3 className="community-feature-title">
                   <a href={guide.url} target="_blank">
@@ -124,10 +123,11 @@ export default class CommunityIndex extends React.Component {
               </Col>
               <Col lg={4} md={4} sm={4} xs={12} className="community-feature animated fadeIn feature-3">
                 <a href={prefixLink(blogUrl)} target="_blank">
-                  <Image src={blog.data.photo} alt={`Blog Post`} style={{ maxWidth: '165px' }} />
+                  {/* <Image src={blog.data.photo} alt={`Blog Post`} style={{ maxWidth: '100px' }} /> */}
+                  <Image src={'./images/mongodb.png'} alt={`Blog Post`} style={{ maxWidth: '100px' }} />
                 </a>
                 <h3 className="community-feature-title">
-                  <a href={blogUrl} target="_blank">
+                  <a href={prefixLink(blogUrl)} target="_blank">
                     {blog.data.title}
                   </a>
                 </h3>

@@ -13,9 +13,16 @@
 }
 
 @media(max-width: 767px) {
-  .community-index .community-index-title, .community-index .community-index-description {
+  .community-index .community-index-title {
     padding: 0 50px;
+    font-size: 2.75em;
   }
+
+  .community-index .community-index-description {
+    padding: 0 50px;
+    font-size: 1.05em;
+  }
+
   .community-index .wrapper {
     margin-left: -100px;
     margin-right: -100px;

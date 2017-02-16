@@ -75,13 +75,13 @@ export default class BlogIndex extends React.Component {
     return (
       <div className="">
         <Helmet
-          title={`${config.siteTitle} | ${BlogIndex.metadata().title}`}
+          title={`${BlogIndex.metadata().title} | ${config.siteTitle}`}
           meta={[
             {
               name: 'description',
               content: `${BlogIndex.metadata().description}`,
             },
-            { property: 'og:title', content: `${config.siteTitle} | ${BlogIndex.metadata().title}` },
+            { property: 'og:title', content: `${BlogIndex.metadata().title} | ${config.siteTitle}` },
             { property: 'og:description', content: BlogIndex.metadata().description },
             { property: 'og:image', content: 'https://assets.scaphold.io/community/Scaphold_Community_Open_Graph.png' },
             { property: 'og:url', content: `${config.baseUrl}${config.linkPrefix}${this.props.route.page.path}` },
@@ -108,7 +108,7 @@ export default class BlogIndex extends React.Component {
               <div className="community-header-count">
                 <span className="community-header-number"><b>{filteredBlogPostList.length} Posts</b></span>
               </div>
-              <Button className="community-header-submit" bsStyle="primary" href="mailto:community@scaphold.io?body=Thanks%20for%20contributing%21%0A%0ASend%20us%20a%20message%20outlining%20your%20idea%20or%20join%20us%20on%20Slack%20at%20https%3A%2F%2Fscapholdslackin.herokuapp.com%20and%20contact%20%40michael%20or%20%40vince.%0A%0AThis%20site%20is%20also%20entirely%20open%20source%20so%20feel%20free%20to%20submit%20a%20pull%20request%20directly%20to%20GitHub%20%28https%3A%2F%2Fgithub.com%2Fscaphold-io%2Fscaphold-community%2Fpulls%29%21%0A%0AThanks%21&subject=I%27d%20Like%20To%20Contribute%21">
+              <Button className="community-header-submit" bsStyle="primary" onClick={() => { window.Intercom('show'); }}>
                 Submit a Post
               </Button>
             </Col>
@@ -117,13 +117,13 @@ export default class BlogIndex extends React.Component {
             {
               filteredBlogPostList.map((post, i) => (
                 <article key={i} className="blog-list-item">
-                  <Row>
+                  <Row className="blog-list-item-row">
                     <Col lg={9} md={9} sm={9} xs={12}>
                       <h2 className="blog-list-item-title">
                         <Link to={prefixLink(post.path)}>{post.title}</Link>
                       </h2>
                       <h3>{post.description}</h3>
-                      <p>
+                      <p className="blog-item-footer">
                         <a href={prefixLink(post.path)} className="blog-list-item-read-more">
                           Read More <FontAwesome name="arrow-right" />
                         </a>
@@ -147,8 +147,8 @@ export default class BlogIndex extends React.Component {
                         </div>
                       </p>
                     </Col>
-                    <Col lg={3} md={3} sm={3} xs={12}>
-                      <Link to={post.path} className="blog-list-item-hero">
+                    <Col lg={3} md={3} sm={3} xs={12} className="text-center">
+                      <Link to={prefixLink(post.path)} className="blog-list-item-hero">
                         <Image src={post.photo} className="blog-list-item-photo blog-list-container-img" />
                       </Link>
                     </Col>

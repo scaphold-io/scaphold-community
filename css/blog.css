@@ -46,11 +46,21 @@
   margin-bottom: 0;
 }
 
+.blog-list-item-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
 .blog-list-item-title {
   margin-bottom: 15px !important;
   font-size: 2em;
   line-height: 1.25;
   font-weight: 500 !important;
+}
+
+.blog-item-footer {
+  margin-bottom: 0;
 }
 
 .blog-list-item-img {
@@ -61,10 +71,10 @@
   vertical-align: middle;
 }
 
-
 .blog-list-item-hero {
   display: block;
   margin: 0 auto 16px;
+  text-align: center;
 }
 
 .blog-list-item-photo {

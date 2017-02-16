@@ -43,12 +43,14 @@ export default class HTML extends React.Component {
           {/* Non-Essential, But Required for Analytics */}
           <meta property="fb:app_id" content="1636648986655395" />
           <meta name="twitter:site" content="@ScapholdDotIO" />
-          <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+          <link rel="shortcut icon" type="image/png" href="https://assets.scaphold.io/images/favicon.png" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+          {/*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />*/}
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />
+          <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" />
           {css}
         </head>
         <body>
@@ -83,6 +85,10 @@ export default class HTML extends React.Component {
           />
           <noscript><img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=502625266592537&ev=PageView&noscript=1" alt="fb-pixel" /></noscript>
           {/* Google Analytics (in gatsby-browser.js) */}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-graphql.min.js" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-sql.min.js" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-javascript.min.js" />
         </body>
       </html>
     );

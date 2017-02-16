@@ -20,14 +20,14 @@ export default [
     author: 'Wayne Frazer',
     url: 'https://github.com/bannerintheUK/Cerebral-Scaphold-TodoMVC',
     description: 'A Cerebral GraphQL TodoMVC',
-    img: CerebralGraphQL,
+    img: CerebralGraphQL || ScapholdLogo,
   },
   {
     title: 'React Virtual Reality',
     author: 'Scaphold.io',
     url: 'https://github.com/scaphold-io/react-vr-graphql',
     description: 'A starter kit to help you create awesome VR applications with React Native and GraphQL!',
-    img: GearVRCardboard,
+    img: GearVRCardboard || ScapholdLogo,
   },
   {
     title: 'React + Apollo',
@@ -124,7 +124,7 @@ export default [
     title: 'react-redux-graphql-apollo-bootstrap-webpack-starter',
     author: 'Erwan DATIN (MacKentoch)',
     url: 'https://github.com/MacKentoch/react-redux-graphql-apollo-bootstrap-webpack-starter',
-    description: 'React + React-Router + Redux + GraphQL + Apollo +Bootstrap STARTER (with user authentication)',
+    description: 'React + React-Router + Redux + GraphQL + Apollo + Bootstrap STARTER (with user authentication)',
     img: ReactReduxApollo || ScapholdLogo,
   },
 ];
